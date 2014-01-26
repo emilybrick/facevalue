@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Face Value</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="/stylesheets/main.css">
+    <script src="javascripts/modernizr.js"></script>
+    <script type="text/javascript" src="//use.typekit.net/xkn2niw.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+   </head>
+  <body>
+
+    <section id="vert-nav">
+       <nav role='navigation'>
+        <ul class="topmenu">
+          <li><a href="#0" class="home">Home</a></li>
+          <li><a href="#0"><i class="icon-Science"></i>Science</a>
+          <ul class="submenu">
+            <li> <a href="#0"><i class="icon-Theory"></i>Theory</a></li>
+            <li> <a href="#0"><i class="icon-Hypothesis"></i>Hypothesis</a></li>
+            <li> <a href="#0"><i class="icon-Anatomy"></i>Anatomy</a></li>
+          </ul>
+          </li>
+
+          <li><a href="#0"><i class="icon-Faces"></i>Faces</a>
+            <ul class="submenu faces">
+            <li> <a href="#0">Influential</a></li>
+            <li> <a href="#0">Lovable</a></li>
+            <li> <a href="#0">Aggressive</a></li>
+            <li> <a href="#0">Serious</a></li>
+            <li> <a href="#0">Trusting</a></li>
+          </ul>
+          </li>
+        </ul>
+        <% for(var slug in public.faces._data){ %>
+          <h2><a href="/faces/<%= slug %>"><%= public.faces._data[slug].title %></a></h2>
+          <%- partial("faces/" + slug) %>
+        <% }; %>
+      </nav>
+    </section>
+
+    <div class="hor-nav">
+      <ul class="breadcrumb-nav">
+      <li> <a> CITATION </a></li>
+      </ul>
+    </div>
+
+    <main class="content">
+      <%- yield %>
+    </main>
+
+    <script src="/javascripts/jquery.js"></script>
+    <script src="/javascripts/main.js"></script>
+
+  </body>
+</html>
