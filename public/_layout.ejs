@@ -33,10 +33,6 @@
           </ul>
           </li>
         </ul>
-        <% for(var slug in public.faces._data){ %>
-          <h2><a href="/faces/<%= slug %>"><%= public.faces._data[slug].title %></a></h2>
-          <%- partial("faces/" + slug) %>
-        <% }; %>
       </nav>
     </section>
 
