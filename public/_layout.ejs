@@ -14,22 +14,43 @@
     <section id="vert-nav">
        <nav role='navigation'>
         <ul class="topmenu">
-          <li><a href="#0" class="home">Home</a></li>
-          <li><a href="#0"><i class="icon-Science"></i>Science</a>
-          <ul class="submenu">
-            <li> <a href="#0"><i class="icon-Theory"></i>Theory</a></li>
-            <li> <a href="#0"><i class="icon-Hypothesis"></i>Hypothesis</a></li>
-            <li> <a href="#0"><i class="icon-Anatomy"></i>Anatomy</a></li>
+          <li class="topmenu-item" >
+            <a href="/" class="home">Home</a>
+          </li>
+          <li class="topmenu-item <%- current.path[0] == 'science' ? 'current' : '' %>">
+            <a class="nav-icons" href="/science">
+              <i class="icon-Science"></i>
+              Science
+            </a>
+          <ul class="submenu science">
+            <% for(var slug in public.science._data){ %>
+              <% var page = public.science %>
+              <li class="submenu-item <%- current.source == slug ? 'current' : '' %>">
+                <a class="nav-icons" href="/science/<%= slug %>">
+                  <i class="<%= page._data[slug].icon_class %>"></i>
+                  <%= page._data[slug].title %>
+                </a>
+              </li>
+            <% }; %>
           </ul>
           </li>
 
-          <li><a href="#0"><i class="icon-Faces"></i>Faces</a>
+          <li class="topmenu-item <%- current.path[0] == 'faces' ? 'current' : '' %>">
+            <a class="nav-icons" href="/faces">
+              <i class="icon-Faces"></i>
+              Faces
+            </a>
+            <% console.log(current) %>
             <ul class="submenu faces">
-            <li> <a href="#0">Influential</a></li>
-            <li> <a href="#0">Lovable</a></li>
-            <li> <a href="#0">Aggressive</a></li>
-            <li> <a href="#0">Serious</a></li>
-            <li> <a href="#0">Trusting</a></li>
+            <% for(var slug in public.faces._data){ %>
+              <% var page = public.faces %>
+              <li class="submenu-item <%- current.source == slug ? 'current' : '' %>">
+                <a class="nav-icons" href="/faces/<%= slug %>">
+                  <i class="<%= page._data[slug].icon_class || 'icon-Dot' %>"></i>
+                  <%= page._data[slug].title %>
+                </a>
+              </li>
+            <% }; %>
           </ul>
           </li>
         </ul>
@@ -38,7 +59,7 @@
 
     <div class="hor-nav">
       <ul class="breadcrumb-nav">
-      <li> <a> CITATION </a></li>
+      <li> <a href="/conclusion"> CONCLUSION </a></li>
       </ul>
     </div>
 

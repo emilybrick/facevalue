@@ -1,6 +1,18 @@
 @import "bourbon/bourbon";
 @import "_codenpenstylez";
+@import "_sciencepages";
 @import "fonts";
+
+
+$white: white;
+$gray: #aaaaaa;
+$dark-gray: #575e64;
+$light-blue: #66ccff;
+$dark-blue: #3e688d;
+$lavender: #62b2f6;
+$light-gray: #b9bec3;
+$lightest-gray: #d8d8d8;
+$bg-color: #dee9de;
 
 body {
     background: #dee9de;
@@ -11,4 +23,178 @@ body {
 
 .content {
     margin-left: 220px;
+    @include clearfix;
+}
+
+/* LANDING PAGE STYLES */
+.homewrapper, .sciencewrapper, .faceswrapper {
+    width: auto;
+    display: block;
+    margin: 5% 4% 0 10%;
+    position: relative;
+    @include clearfix;
+}
+
+p {
+    color: shade($light-blue, 20%);
+    font-weight: 400;
+    position: relative;
+    top: -20px;
+    letter-spacing: 1.25px;
+    & strong {
+        color: $dark-blue;
+    }
+}
+
+h1 {
+    &.face, &.science {
+        font-size: 135px;
+        font-weight: 800;
+        display: inline;
+        text-transform: uppercase;
+    }
+    &.face {
+        color: $dark-gray;
+    }
+    &.science {
+        color: $light-gray;
+    }
+}
+
+.buttoncontainer {
+    display: block;
+    margin-top: 50px;
+}
+
+.explorelarge, .learnlarge {
+    display: inline;
+    & a {
+        display: inline;
+        background: $light-blue;
+        padding: 18px 44px;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 16px;
+        color: #F3F3F3;
+        margin-right: 30px;
+        letter-spacing: 2px;
+        border: 5px solid $light-blue;
+        &:hover {
+            @include transition(all 0.15s ease-in-out);
+            border: 5px solid tint($lavender, 10%);
+        }
+    }
+}
+
+/* SCIENCE LANDING PAGE STYLES */
+
+.learnnav {
+    float: left;
+    @include clearfix;
+}
+
+h1 {
+    &.dontjudge, &.whatyousee {
+        font-size: 120px;
+        font-weight: 600;
+        display: block;
+        margin-top: 0;
+        margin-bottom: 0;
+        line-height: 130px;
+        &.dont, &.what {
+            color: tint($dark-gray, 30%);
+        }
+        &.judge, &.you {
+            color: tint($gray, 30%);
+        }
+        &.me, &.see {
+            color: tint($gray, 50%);
+        }
+    }
+}
+
+.youwill {
+    color: $lavender;
+    font-weight: 400;
+    font-size: 16px;
+    position: relative;
+    top: 20px;
+    &:after {
+        content: "";
+        display: block;
+        background: url("../stylesheets/img/arrow.png");
+        width: 215px;
+        height: 26px;
+        margin-top: 5px;
+    }
+}
+
+.sciencebuttons {
+    float: right;
+    width: 180px;
+    height: 200px;
+    text-align: center;
+    margin-top: 265px;
+    @include clearfix;
+    & a {
+        cursor: pointer;
+    }
+    & p {
+        display: block;
+        padding-top: 30px;
+        text-transform: uppercase;
+        font-weight: 600;
+        color: $lavender;
+    }
+    &.circle {
+        display: block;
+    }
+}
+
+
+
+  .facesbuttons {
+    float: left;
+    margin-top: 20px;
+    padding-left: 200px;
+
+    li{
+      a{
+        margin-bottom:26px;
+        padding:15px;
+        display:block;
+        background: $bg-color;
+        border: 5px solid $light-gray;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 16px;
+        letter-spacing: 2px;
+        text-align:center;
+        color: $light-gray;
+        &:hover {
+          color: shade($lavender, 10%);
+          @include transition(all 0.15s ease-in-out);
+          border: 5px solid shade($lavender, 10%);
+        }
+      }
+   }
+}
+
+
+.circle {
+    background-color: $light-blue;
+    border-radius: 50%;
+    width: 110px;
+    height: 110px;
+    background-color: #66ccff;
+    margin: 0 auto;
+    &:hover {
+        background: tint($lavender, 10%);
+        @include transition(all 0.15s ease-in-out);
+    }
+    i {
+        line-height: 110px;
+        color: white;
+        font-size: 60px;
+    }
 }

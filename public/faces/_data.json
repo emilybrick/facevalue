@@ -1,5 +1,22 @@
 {
   "aggressive": {
     "title": "Aggressive"
+  },
+
+ "trusting": {
+    "title": "Trusting"
+  },
+
+ "lovable": {
+    "title": "Lovable"
+  },
+
+ "influential": {
+    "title": "Influential"
+  },
+
+   "naive": {
+    "title": "Naive"
   }
+
 }

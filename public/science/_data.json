@@ -1,5 +1,14 @@
 {
   "anatomy": {
-    "title": "Anatomy"
+    "title": "Anatomy",
+    "icon_class": "icon-Anatomy"
+  },
+    "theory": {
+    "title": "Theory",
+    "icon_class": "icon-Theory"
+  },
+    "hypothesis": {
+    "title": "Hypothesis",
+    "icon_class": "icon-Hypothesis"
   }
 }
