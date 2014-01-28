@@ -1,0 +1,128 @@
+/* SCIENCE SECTION - SUB PAGES */
+
+$white: white;
+$gray: #aaaaaa;
+$dark-gray: #575e64;
+$light-blue: #66ccff;
+$dark-blue: #3e688d;
+$lavender: #62b2f6;
+$light-gray: #b9bec3;
+$lightest-gray: #d8d8d8;
+$bg-color: #dee9de;
+
+
+.baby-bg {
+  height: 100%;
+  opacity: 1;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.hypothesisheader, .anatomyheader, .theoryheader{
+  font-size:64px;
+  text-transform: uppercase;
+  color: $lavender;
+  font-weight:700;
+  letter-spacing:2.5px;
+}
+
+
+/* HYPOTHESIS SLIDER */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#slider {
+  max-width: 500px;
+  text-align: left;
+  background-color: rgba(#fafafa, 0.75);
+  padding: 30px;
+}
+
+#overflow {
+  width: 100%;
+  overflow: hidden;
+}
+
+#slides .inner {
+  width: 400%;
+}
+
+#slides .inner {
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+
+  -webkit-transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+  -moz-transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+  -o-transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+  -ms-transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+  transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+
+  -webkit-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000);
+  -moz-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000);
+  -o-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000);
+  -ms-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000);
+  transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000);
+}
+
+#slides article {
+  width: 25%;
+  float: left;
+}
+
+#slide1:checked ~ #slides .inner {
+  margin-left: 0;
+}
+
+#slide2:checked ~ #slides .inner {
+  margin-left: -100%;
+}
+
+#slide3:checked ~ #slides .inner {
+  margin-left: -200%;
+}
+
+#slide4:checked ~ #slides .inner {
+  margin-left: -300%;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+label {
+  background: $gray;
+  display: inline-block;
+  cursor: pointer;
+  width: 12px;
+  height: 12px;
+  border-radius: 8px;
+  margin: 20px 5px 0px 5px;
+  &:hover {
+    background: $dark-blue;
+    @include transition(all 0.15s ease-in-out);
+  }
+}
+
+#slide1:checked ~ label[for="slide1"],
+#slide2:checked ~ label[for="slide2"],
+#slide3:checked ~ label[for="slide3"],
+#slide4:checked ~ label[for="slide4"] {
+  background: $dark-blue;
+}
+
+.hypo-slider {
+  font-size:14px;
+  position:relative;
+  top:0;
+  color: $dark-gray;
+  line-height:22px;
+}
