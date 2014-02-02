@@ -40,7 +40,6 @@
               <i class="icon-Faces"></i>
               Faces
             </a>
-            <% console.log(current) %>
             <ul class="submenu faces">
             <% for(var slug in public.faces._data){ %>
               <% var page = public.faces %>
@@ -59,7 +58,16 @@
 
     <div class="hor-nav">
       <ul class="breadcrumb-nav">
-      <li> <a href="/conclusion"> CONCLUSION </a></li>
+      <% for(var i in current.path) { %>
+        <% if (current.path[i] !== 'index') { %>
+        <% var slug = [] %>
+        <% for (var j=0; j <= i; j++) { slug.push(current.path[j]) }; %>
+          <li class="breadcrumb-link" >
+            <a href="/<%= slug.join('/') %>"><%= current.path[i] %> /</a>
+          </li>
+        <% }; %>
+      <% }; %>
+        <li class="conclusion"> <a href="/conclusion" class="conclusion"> CONCLUSION </a></li>
       </ul>
     </div>
 

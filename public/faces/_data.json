@@ -1,22 +1,22 @@
 {
-  "aggressive": {
-    "title": "Aggressive"
-  },
-
- "trusting": {
-    "title": "Trusting"
-  },
-
- "lovable": {
-    "title": "Lovable"
-  },
-
- "influential": {
-    "title": "Influential"
+   "precise": {
+    "title": "Precise"
   },
 
    "naive": {
     "title": "Naive"
+  },
+
+"lovable": {
+    "title": "Lovable"
+  },
+
+  "funny": {
+    "title": "Funny"
+  },
+
+ "trusting": {
+    "title": "Trusting"
   }
 
 }

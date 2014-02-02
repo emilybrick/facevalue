@@ -1,0 +1,129 @@
+$white: white;
+$gray: #aaaaaa;
+$dark-gray: #575e64;
+$light-blue: #66ccff;
+$dark-blue: #3e688d;
+$lavender: #62b2f6;
+$light-teal: #95e2e6;
+$light-gray: #b9bec3;
+$lightest-gray: #d8d8d8;
+$bg-color: #dee9de;
+$teal: #6dd1d6;
+
+.facefull {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    @include clearfix;
+    .imagewrapperprecision, .imagewrappernaive, .imagewrapperlovable, .imagewrapperfunny, .imagewrappertrusting {
+        background-image: url("../stylesheets/img/precision.jpg");
+        position: absolute;
+        top: 0px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-repeat: no-repeat;
+        background-position: right;
+        width: auto;
+        z-index: -999999;
+        background-size: contain;
+        height: 100%;
+        width: auto;
+    }
+    .imagewrappernaive {
+        background-image: url("../stylesheets/img/naive.jpg");
+    }
+    .imagewrapperlovable {
+        background-image: url("../stylesheets/img/lovable.jpg");
+    }
+    .imagewrapperfunny {
+        background-image: url("../stylesheets/img/funny.jpg");
+    }
+    .imagewrappertrusting {
+        background-image: url("../stylesheets/img/trusting.jpg");
+    }
+
+    .facehover {
+        display:none;
+    }
+
+    &.active {
+        .facehover {
+            display:block;
+            position: absolute;
+            top: 0px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-repeat: no-repeat;
+            background-position: right;
+            width: auto;
+            z-index: -999999;
+            background-size: contain;
+            @include transition(all 0.5s ease-in-out);
+            height: 100%;
+            width: auto;
+        }
+        .facehover-precision {
+            background-image: url("../stylesheets/img/precision-span.jpg");
+        }
+        .facehover-funny {
+            background-image: url("../stylesheets/img/funny-span.jpg");
+        }
+        .facehover-trusting {
+            background-image: url("../stylesheets/img/trusting-span.jpg");
+        }
+        .facehover-naive {
+            background-image: url("../stylesheets/img/naive-span.jpg");
+        }
+        .facehover-lovable {
+            background-image: url("../stylesheets/img/lovable-span.jpg");
+        }
+
+    }
+}
+
+
+
+
+.facesheader {
+    text-transform: uppercase;
+    color: $teal;
+    letter-spacing: 2px;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.facesreveal {
+    a {
+        margin-bottom: 26px;
+        padding: 15px;
+        background: $light-teal;
+        border: 5px solid $light-teal;
+        text-transform: uppercase;
+        font-weight: 800;
+        font-size: 16px;
+        letter-spacing: 2px;
+        text-align: center;
+        color: white;
+        cursor: pointer;
+        &:hover {
+            color: shade($light-blue, 10%);
+            @include transition(all 0.1s ease-in-out);
+            border: 5px solid shade($light-blue, 10%);
+        }
+    }
+}
+
+.facesexplanation {
+    width:20%;
+    position:relative;
+    top:50px;
+    padding: 0px 0px 50px 0px;
+    background-color:$bg-color;
+    p{
+    font-size: 14px;
+    font-weight: 600;
+    color: $dark-gray;
+}
+}
