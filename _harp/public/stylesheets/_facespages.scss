@@ -16,7 +16,7 @@ $teal: #6dd1d6;
     overflow: hidden;
     @include clearfix;
     .imagewrapperprecision, .imagewrappernaive, .imagewrapperlovable, .imagewrapperfunny, .imagewrappertrusting {
-        background-image: url("../stylesheets/img/precision.jpg");
+        background-image: url("img/precision.jpg");
         position: absolute;
         top: 0px;
         left: 0;
@@ -31,16 +31,16 @@ $teal: #6dd1d6;
         width: auto;
     }
     .imagewrappernaive {
-        background-image: url("../stylesheets/img/naive.jpg");
+        background-image: url("img/naive.jpg");
     }
     .imagewrapperlovable {
-        background-image: url("../stylesheets/img/lovable.jpg");
+        background-image: url("img/lovable.jpg");
     }
     .imagewrapperfunny {
-        background-image: url("../stylesheets/img/funny.jpg");
+        background-image: url("img/funny.jpg");
     }
     .imagewrappertrusting {
-        background-image: url("../stylesheets/img/trusting.jpg");
+        background-image: url("img/trusting.jpg");
     }
 
     .facehover {
@@ -65,19 +65,19 @@ $teal: #6dd1d6;
             width: auto;
         }
         .facehover-precision {
-            background-image: url("../stylesheets/img/precision-span.jpg");
+            background-image: url("img/precision-span.jpg");
         }
         .facehover-funny {
-            background-image: url("../stylesheets/img/funny-span.jpg");
+            background-image: url("img/funny-span.jpg");
         }
         .facehover-trusting {
-            background-image: url("../stylesheets/img/trusting-span.jpg");
+            background-image: url("img/trusting-span.jpg");
         }
         .facehover-naive {
-            background-image: url("../stylesheets/img/naive-span.jpg");
+            background-image: url("img/naive-span.jpg");
         }
         .facehover-lovable {
-            background-image: url("../stylesheets/img/lovable-span.jpg");
+            background-image: url("img/lovable-span.jpg");
         }
 
     }
