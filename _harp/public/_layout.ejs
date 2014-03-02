@@ -4,9 +4,8 @@
     <title>Face Value</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
-    <% var base_url = (environment === 'production') ? '/facevalue/' : '/'%>
-    <link rel="stylesheet" href="<%= base_url %>stylesheets/main.css">
-    <script src="<%= base_url %>javascripts/modernizr.js"></script>
+    <link rel="stylesheet" href="/stylesheets/main.css">
+    <script src="/javascripts/modernizr.js"></script>
     <script type="text/javascript" src="//use.typekit.net/xkn2niw.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
    </head>
@@ -76,8 +75,8 @@
       <%- yield %>
     </main>
 
-    <script src="<%= base_url %>javascripts/jquery.js"></script>
-    <script src="<%= base_url %>javascripts/main.js"></script>
+    <script src="/javascripts/jquery.js"></script>
+    <script src="/javascripts/main.js"></script>
 
   </body>
 </html>
